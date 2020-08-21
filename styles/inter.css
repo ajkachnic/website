@@ -1,0 +1,19 @@
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	src: url(https://rsms.me/inter/font-files/Inter-Regular.woff2?3.13) format('woff2'),url(https://rsms.me/inter/font-files/Inter-Regular.woff?3.13) format('woff');
+}
+
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 500;
+	src: url(https://rsms.me/inter/font-files/Inter-Medium.woff2?3.13) format('woff2'),url(https://rsms.me/inter/font-files/Inter-Medium.woff?3.13) format('woff');
+}
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 700;
+	src: url(https://rsms.me/inter/font-files/Inter-Bold.woff2?3.13) format('woff2'),url(https://rsms.me/inter/font-files/Inter-Bold.woff?3.13) format('woff');
+}
