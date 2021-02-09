@@ -2,16 +2,19 @@
   "name": "website-redesign",
   "version": "0.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "check": "rome check"
   },
   "keywords": [],
   "author": "Andrew Kachnic <ajkachnic@protonmail.com> (https://andrewkachnic.now.sh)",
   "license": "MIT",
   "dependencies": {
+    "@panelbear/panelbear-js": "^1.2.0",
     "autoprefixer": "^10.2.3",
     "next": "^10.0.5",
     "next-seo": "^4.19.0",
@@ -23,6 +26,7 @@
   "devDependencies": {
     "@types/node": "^14.14.22",
     "@types/react": "^17.0.0",
+    "rome": "^10.0.4-beta",
     "typescript": "^4.1.3"
   }
 }

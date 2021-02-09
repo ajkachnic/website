@@ -1,11 +1,11 @@
-import { FC, PropsWithChildren } from 'react'
+import {FC, PropsWithChildren} from "react";
 
-type Props = PropsWithChildren<{}>
+type Props = PropsWithChildren<{}>;
 
-const Section: FC<Props> = ({ children }) => (
-  <section>
-    {children}
-  </section>
-)
+const Section: FC<Props> = ({children}) =>
+	<section>
+		{children}
+	</section>
+;
 
-export default Section
+export default Section;

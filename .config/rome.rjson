@@ -1,0 +1,9 @@
+// For configuration documentation see http://romefrontend.dev/#project-configuration
+name: "website-redesign"
+lint: {
+	ignore: [
+		"tailwind.config.js"
+		"postcss.config.js"
+]
+}
+root: true
