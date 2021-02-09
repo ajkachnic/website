@@ -32,7 +32,7 @@ const LinkComponent: FC<Props> = ({
   if(variant === 'loud'){
     color = {
       light: 'text-accent-700',
-      dark: 'text-accent-300'
+      dark: 'dark:text-accent-400'
     }
   }
 

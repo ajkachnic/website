@@ -29,15 +29,15 @@ const Text: FC<TextProps> = ({
   select = 'text',
   className = '',
   color = {
-    dark: 'text-gray-light',
+    dark: 'dark:text-gray-light',
     light: 'text-gray-dark'
   },
   ...props
 }) => {
   const classes = [
     `font-${weight}`,
-    `${color.light}`,
-    `dark:${color.dark}`,
+    color.light,
+    color.dark,
     // Letter spacing
     generateTracking(tracking),
     // Line spacing
