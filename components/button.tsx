@@ -41,7 +41,7 @@ const Button: FC<Props> = ({
 
  // Computed elements
   const colors = bg === "accent"
-    ? ['bg-accent-600', 'hover:bg-accent-500', 'ring-accent-700', 'text-gray-light']
+    ? ['bg-accent-600', 'hover:bg-accent-500', 'ring-accent-700', 'text-gray-dark']
     : ['bg-gray-50', 'hover:bg-gray-100', 'ring-gray-200', 'dark:bg-gray-900', 'dark:hover:bg-gray-800', 'dark:ring-gray-700', 'text-gray-dark', 'dark:text-gray-light']
 
   classes.push(responsiveSize(size))
