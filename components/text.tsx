@@ -1,5 +1,5 @@
 import { FC, PropsWithChildren } from 'react'
-import { adjustSize, responsiveSize } from '../lib/adjust'
+import { generateOpacity, generateTracking, responsiveSize } from '../lib/adjust'
 import { Color, FontWeight, LineHeight, Size, TextElement, TextTracking, UserSelect } from '../lib/types'
 
 export type TextProps = PropsWithChildren<{
@@ -7,7 +7,7 @@ export type TextProps = PropsWithChildren<{
   // Some omitted
   weight?: FontWeight
   size?: Size,
-  opacity?: number,
+  opacity?: 60 | 80 | 100,
   tracking?: TextTracking,
   leading?: LineHeight,
   select?: UserSelect,
@@ -28,19 +28,18 @@ const Text: FC<TextProps> = ({
   leading = 'normal',
   select = 'text',
   className = '',
-  href = '',
   color = {
-    dark: 'gray-light',
-    light: 'gray-dark'
+    dark: 'text-gray-light',
+    light: 'text-gray-dark'
   },
   ...props
 }) => {
   const classes = [
     `font-${weight}`,
-    `text-${color.light}`,
-    `dark:text-${color.dark}`,
+    `${color.light}`,
+    `dark:${color.dark}`,
     // Letter spacing
-    `tracking-${tracking}`,
+    generateTracking(tracking),
     // Line spacing
     `leading-${leading}`,
     // user-select
@@ -50,14 +49,14 @@ const Text: FC<TextProps> = ({
   ]
   
   // Don't override variables
-  opacity && classes.push(`text-opacity-${opacity}`)
+  opacity && classes.push(generateOpacity(opacity))
 
   size && classes.push(responsiveSize(size))
 
   classes.push(...className.split(' '))
 
   return (
-    <$ className={classes.join(' ')} href={href} {...props}>
+    <$ className={classes.join(' ')} {...props}>
       {children}
     </$>
   )

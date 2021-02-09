@@ -4,6 +4,7 @@ import { Size, Element } from '../lib/types'
 import Title from './title'
 import Text from './text'
 import Quote from './quote'
+import Link from './link'
 
 type Props = {
   $?: Element,
@@ -32,9 +33,11 @@ const Card: FC<Props> = ({
   
   return (
     <$ className={classes.join(' ')}>
-      <Title size="2xl" $='h3' href={href}>{title}</Title>
+      <Link href={href} target='_blank'>
+        <Title size="2xl" $='h3'>{title}</Title>
+      </Link>
       { quote && 
-        <Quote size='lg'>
+        <Quote size='md'>
           {quote}
         </Quote>
       }

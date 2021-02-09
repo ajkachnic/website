@@ -7,7 +7,8 @@ type Props = PropsWithChildren<{
   href: string,
   active?: boolean
   variant?: 'subtle' | 'loud',
-  target?: '_self' | '_blank' | '_parent' | '_top'
+  target?: '_self' | '_blank' | '_parent' | '_top',
+  rel?: 'noopener' | 'noreferrer'
 }> & TextProps
 
 const LinkComponent: FC<Props> = ({ 
@@ -16,6 +17,7 @@ const LinkComponent: FC<Props> = ({
   active = false,
   target = '_self',
   variant = 'subtle',
+  rel = 'noopener',
   ...props
 }) => {
   const classes = [
@@ -29,13 +31,13 @@ const LinkComponent: FC<Props> = ({
 
   if(variant === 'loud'){
     color = {
-      light: 'accent-400',
-      dark: 'accent-400'
+      light: 'text-accent-600',
+      dark: 'text-accent-400'
     }
   }
 
   return (
-    <Link href={href} passHref>
+    <Link href={href}>
       <Text 
         className={classes.join(' ')} 
         color={color}
@@ -44,6 +46,7 @@ const LinkComponent: FC<Props> = ({
         $='a'
         target={target}
         href={href}
+        rel={rel}
       >
         {children}
       </Text>

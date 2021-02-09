@@ -1,5 +1,5 @@
-import { FC, PropsWithChildren } from 'react'
-import { responsiveSize, responsiveSpacing } from '../lib/adjust'
+import { FC, MouseEventHandler, PropsWithChildren } from 'react'
+import { responsiveSize } from '../lib/adjust'
 import { Size, Element } from '../lib/types'
 import Link from 'next/link'
 
@@ -8,7 +8,7 @@ type Props = PropsWithChildren<{
   size?: Size,
   bg: 'accent' | 'gray',
   href?: string,
-  onClick?: (event: MouseEvent) => void
+  onClick?: MouseEventHandler 
 }>
 
 const Button: FC<Props> = ({ 
@@ -32,7 +32,11 @@ const Button: FC<Props> = ({
     'hover:translate-y-1', 
     // Focus state
     'focus:ring-4', 
-    'focus-outline-none'
+    'focus-outline-none',
+    // Responsive spacing
+    'lg:px-16',
+    'md:px-8',
+    'sm:px-4'
  ]
 
  // Computed elements
@@ -41,7 +45,6 @@ const Button: FC<Props> = ({
     : ['bg-gray-50', 'hover:bg-gray-100', 'ring-gray-200', 'dark:bg-gray-900', 'dark:hover:bg-gray-800', 'dark:ring-gray-700', 'text-gray-dark', 'dark:text-gray-light']
 
   classes.push(responsiveSize(size))
-  classes.push(responsiveSpacing('px', 16))
   classes.push(...colors)
 
   const className = classes.join(' ')

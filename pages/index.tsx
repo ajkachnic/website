@@ -35,7 +35,7 @@ const Index: Page = ({ projects }) => {
       <Text size='md' opacity={80}>
         I have a tendency to work on conceptually stupid projects for my own enjoyment. So, I’ve attempted to filter this down to the not-so-stupid ones.
       </Text>
-      <Spacer size={6} />
+      <Spacer size={8} />
       <Grid gap={8}>
         {projects.map(({ 
           name, 

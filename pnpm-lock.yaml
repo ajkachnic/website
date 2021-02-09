@@ -1,6 +1,7 @@
 dependencies:
   autoprefixer: 10.2.3_postcss@8.2.4
   next: 10.0.5_c39e9db791ea05e3ec4e0e74abb7a6b5
+  next-seo: 4.19.0_27fda0060d237a6cfdb35db406171e5f
   postcss: 8.2.4
   react: 17.0.1
   react-dom: 17.0.1_react@17.0.1
@@ -2590,6 +2591,18 @@ packages:
     dev: false
     resolution:
       integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
+  /next-seo/4.19.0_27fda0060d237a6cfdb35db406171e5f:
+    dependencies:
+      next: 10.0.5_c39e9db791ea05e3ec4e0e74abb7a6b5
+      react: 17.0.1
+      react-dom: 17.0.1_react@17.0.1
+    dev: false
+    peerDependencies:
+      next: ^8.1.1-canary.54 || ^9.0.0 || ^10.0.0
+      react: ^16.0.0 || ^17.0.0
+      react-dom: ^16.0.0 || ^17.0.0
+    resolution:
+      integrity: sha512-+jgXd1UW0XKLiBMrumjPDANeV82mTHTxGZJwU6T1mlNougKpXINlDgIHkN30sM2eDXh+xXOURj99WN2Tm9K6rg==
   /next-tick/1.0.0:
     dev: false
     resolution:
@@ -4417,6 +4430,7 @@ specifiers:
   '@types/react': ^17.0.0
   autoprefixer: ^10.2.3
   next: ^10.0.5
+  next-seo: ^4.19.0
   postcss: ^8.2.4
   react: ^17.0.1
   react-dom: ^17.0.1
