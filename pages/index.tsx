@@ -22,7 +22,7 @@ const Index: Page = ({projects}) => {
 				Hey, I&apos;m Andrew Kachnic.
 			</Title>
 			<Text size="xl" opacity={80}>
-				I&apos;m a young person at an unspecified age. I&apos;ve worked with TypeScript, Go, Rust, React, Vue, Svelte, etc in the past. Currently learning Haskell and functional programming. Working at
+				I&apos;m a young person at an unspecified age. I&apos;ve worked with TypeScript, Go, Rust, React, Vue, Svelte, etc in the past. Currently learning Haskell and functional programming. Working at&nbsp;
 				<Link variant="loud" target="_blank" href="https://transloadit.com">
 					Transloadit
 				</Link>
@@ -66,7 +66,7 @@ const Index: Page = ({projects}) => {
 
 export const getStaticProps: GetStaticProps<{
 	projects: Array<Project>;
-}> = async (context) => {
+}> = async () => {
 	const projects = await fetchProjects();
 	return {
 		props: {

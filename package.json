@@ -2,7 +2,6 @@
   "name": "website-redesign",
   "version": "0.0.0",
   "description": "",
-  "type": "module",
   "main": "index.js",
   "scripts": {
     "dev": "next",

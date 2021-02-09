@@ -36,7 +36,7 @@ const Button: FC<Props> = ({
     // Responsive spacing
     'lg:px-16',
     'md:px-8',
-    'sm:px-4'
+    'px-4'
  ]
 
  // Computed elements

@@ -13,9 +13,7 @@ function MyApp({Component, pageProps}) {
 	);
 	usePanelbear(
 		"BP21sTiPSML",
-		{
-			debug: true,
-		},
+		{},
 	);
 	const description = `I'm a young person at an unspecified age. I've worked with TypeScript, Go, Rust, React, Vue, Svelte, etc in the past. Here you can find more information about me.`;
 
