@@ -67,10 +67,10 @@ const Index: Page = ({projects}) => {
 export const getStaticProps: GetStaticProps<{
 	projects: Array<Project>;
 }> = async () => {
-	const projects = await fetchProjects();
+	// const projects = await fetchProjects();
 	return {
 		props: {
-			projects,
+			projects: [],
 		},
 		// Revalidate every 30 minutes
 		revalidate: 60 * 30,
